@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Solar de Palabras</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: radial-gradient(circle, #0d1b2a, #000);
+      overflow: hidden;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .sol {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      background: gold;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0 0 30px yellow;
+      z-index: 2;
+      cursor: pointer; /* 🔥 Hace que se vea clickeable */
+      transition: transform 0.2s;
+    }
+
+    .sol:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 50px orange;
+    }
+
+    .orbita {
+      position: absolute;
+      border: 1px dashed rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: girar linear infinite;
+    }
+
+    .planeta {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -50%);
+      background: #ff4d94;
+      border-radius: 50%;
+      padding: 8px 12px;
+      font-size: 13px;
+      white-space: nowrap;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff5dd6;
+      transition: transform 0.3s, background 0.3s;
+      animation: contrarrotar linear infinite;
+    }
+
+    @keyframes girar {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes contrarrotar {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(-360deg); }
+    }
+
+    /* Órbitas con diferentes tamaños y velocidades */
+    .orbita:nth-child(2) { width: 180px; height: 180px; animation-duration: 12s; }
+    .orbita:nth-child(3) { width: 240px; height: 240px; animation-duration: 16s; }
+    .orbita:nth-child(4) { width: 300px; height: 300px; animation-duration: 20s; }
+    .orbita:nth-child(5) { width: 360px; height: 360px; animation-duration: 24s; }
+    .orbita:nth-child(6) { width: 420px; height: 420px; animation-duration: 28s; }
+    .orbita:nth-child(7) { width: 480px; height: 480px; animation-duration: 32s; }
+    .orbita:nth-child(8) { width: 540px; height: 540px; animation-duration: 36s; }
+    .orbita:nth-child(9) { width: 600px; height: 600px; animation-duration: 40s; }
+    .orbita:nth-child(10) { width: 660px; height: 660px; animation-duration: 44s; }
+    .orbita:nth-child(11) { width: 720px; height: 720px; animation-duration: 48s; }
+
+    /* Sincronizamos contra-rotación */
+    .orbita:nth-child(2) .planeta { animation-duration: 12s; }
+    .orbita:nth-child(3) .planeta { animation-duration: 16s; }
+    .orbita:nth-child(4) .planeta { animation-duration: 20s; }
+    .orbita:nth-child(5) .planeta { animation-duration: 24s; }
+    .orbita:nth-child(6) .planeta { animation-duration: 28s; }
+    .orbita:nth-child(7) .planeta { animation-duration: 32s; }
+    .orbita:nth-child(8) .planeta { animation-duration: 36s; }
+    .orbita:nth-child(9) .planeta { animation-duration: 40s; }
+    .orbita:nth-child(10) .planeta { animation-duration: 44s; }
+    .orbita:nth-child(11) .planeta { animation-duration: 48s; }
+  </style>
+</head>
+<body>
+  <!-- ☀️ Sol clickeable -->
+  <div class="sol" onclick="window.location.href='carta.html'">Amor</div>
+
+  <!-- 10 frases -->
+  <div class="orbita"><div class="planeta">Eres mi sol 🌞</div></div>
+  <div class="orbita"><div class="planeta">Mi razón de sonreír 💕</div></div>
+  <div class="orbita"><div class="planeta">Te amo infinito ♾️</div></div>
+  <div class="orbita"><div class="planeta">Mi paz interior 🌿</div></div>
+  <div class="orbita"><div class="planeta">Mi mundo entero 🌎</div></div>
+  <div class="orbita"><div class="planeta">Mi inspiración diaria ✨</div></div>
+  <div class="orbita"><div class="planeta">Mi destino eres tú 🌹</div></div>
+  <div class="orbita"><div class="planeta">Mi melodía favorita 🎶</div></div>
+  <div class="orbita"><div class="planeta">Mi refugio seguro 🏡</div></div>
+  <div class="orbita"><div class="planeta">Amor de mi vida 🌸</div></div>
+</body>
+</html>
