@@ -6,16 +6,26 @@
   <title>Hola Mi Amor</title>
   <style>
     body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background: radial-gradient(circle, #0d1b2a, #000);
-  overflow: hidden;
-  color: white;
-  font-family: Arial, sans-serif;
-}
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: radial-gradient(circle, #0d1b2a, #000);
+      overflow: hidden;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Contenedor del sistema solar */
+    .sistema-solar {
+      position: relative;
+      width: 800px;   /* tamaño máximo del sistema solar */
+      height: 800px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     .sol {
       position: relative;
@@ -30,7 +40,7 @@
       font-weight: bold;
       box-shadow: 0 0 30px yellow;
       z-index: 2;
-      cursor: pointer; /* 🔥 Hace que se vea clickeable */
+      cursor: pointer;
       transition: transform 0.2s;
     }
 
@@ -44,6 +54,9 @@
       border: 1px dashed rgba(255, 255, 255, 0.2);
       border-radius: 50%;
       animation: girar linear infinite;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     .planeta {
@@ -63,8 +76,8 @@
     }
 
     @keyframes girar {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
     }
 
     @keyframes contrarrotar {
@@ -98,19 +111,21 @@
   </style>
 </head>
 <body>
-  <!-- ☀️ Sol clickeable -->
-  <div class="sol" onclick="window.location.href='carta.html'">Amor...</div>
+  <div class="sistema-solar">
+    <!-- ☀️ Sol clickeable -->
+    <div class="sol" onclick="window.location.href='carta.html'">Amor...</div>
 
-  <!-- 10 frases -->
-  <div class="orbita"><div class="planeta">Eres mi sol 🌞</div></div>
-  <div class="orbita"><div class="planeta">Mi razón de sonreír 💕</div></div>
-  <div class="orbita"><div class="planeta">Te amo infinito ♾️</div></div>
-  <div class="orbita"><div class="planeta">Mi paz interior 🌿</div></div>
-  <div class="orbita"><div class="planeta">Mi mundo entero 🌎</div></div>
-  <div class="orbita"><div class="planeta">Mi inspiración diaria ✨</div></div>
-  <div class="orbita"><div class="planeta">Mi destino eres tú 🌹</div></div>
-  <div class="orbita"><div class="planeta">Mi melodía favorita 🎶</div></div>
-  <div class="orbita"><div class="planeta">Mi refugio seguro 🏡</div></div>
-  <div class="orbita"><div class="planeta">Amor de mi vida 🌸</div></div>
+    <!-- 10 frases -->
+    <div class="orbita"><div class="planeta">Eres mi sol 🌞</div></div>
+    <div class="orbita"><div class="planeta">Mi razón de sonreír 💕</div></div>
+    <div class="orbita"><div class="planeta">Te amo infinito ♾️</div></div>
+    <div class="orbita"><div class="planeta">Mi paz interior 🌿</div></div>
+    <div class="orbita"><div class="planeta">Mi mundo entero 🌎</div></div>
+    <div class="orbita"><div class="planeta">Mi inspiración diaria ✨</div></div>
+    <div class="orbita"><div class="planeta">Mi destino eres tú 🌹</div></div>
+    <div class="orbita"><div class="planeta">Mi melodía favorita 🎶</div></div>
+    <div class="orbita"><div class="planeta">Mi refugio seguro 🏡</div></div>
+    <div class="orbita"><div class="planeta">Amor de mi vida 🌸</div></div>
+  </div>
 </body>
 </html>
